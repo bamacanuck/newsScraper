@@ -8,8 +8,8 @@ var cheerio = require("cheerio");
 var mongoose = require("mongoose");
 
 // our models
-// var Comments = require("./models/Comments.js");
-// var Articles = require("./models/Articles.js");
+var Comment = require("./models/Comment.js");
+var Article = require("./models/Article.js");
 
 var PORT = process.env.PORT || 3000;
 
