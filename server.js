@@ -26,6 +26,8 @@ app.set("view engine", "handlebars");
 
 var router = express.Router();
 
+require ("./config/routes")(router);
+
 // public folder content... of static dir
 app.use(express.static(__dirname + "public"));
 
