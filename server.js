@@ -31,6 +31,26 @@ app.use(express.static(__dirname + "public"));
 
 app.use(router);
 
+var db = process.env.MONGODB_URI || 'mongodb://localhost:27017/theNews';
+
+mongoose.Promise = Promise;
+
+mongoose.connect(db, function (err) {
+	if (err) {
+		console.log(err);
+	}
+	else {
+		console.log('Our mongoose connection is a success!');
+	}
+});
+
+
+//-------------------------------------------------
+// mongoose.connect("mongodb://localhost/week18Populater", {
+//   useMongoClient: true
+// });
+//-------------------------------------------------
+
 // Listen on port 3000
 app.listen(PORT, function() {
   console.log("... listening on port: " + PORT);
