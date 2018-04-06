@@ -1,3 +1,6 @@
+var cheerio = require("cheerio");
+var request = require("request");
+
 // A GET route for scraping the echojs website
 app.get("/scrape", function(req, res) {
   // First, we grab the body of the html with request
